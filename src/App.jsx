@@ -8,10 +8,6 @@ import { useSelector } from "react-redux";
 function App() {
   const contacts = useSelector((state) => state.contactsItems.items);
 
-  useEffect(() => {
-    localStorage.setItem("contacts", JSON.stringify(contacts));
-  }, [contacts]);
-
   return (
     <div>
       <h1>Phonebook</h1>
